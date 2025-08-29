@@ -10,9 +10,15 @@
     <body>
         <header class="page-header">
             <div class="container">
-                <a href="{% url 'post_new' %}" class="top-menu">
-                    {% include './icons/file-earmark-plus.svg' %}
-                </a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'post_new' %}" class="top-menu">
+                        {% load static %}
+                        <img src="{% static 'blog/icons/file-earmark-plus.svg' %}" alt="Ícone">
+
+                {% endif %}
+            {% load static %}
+                <img src="{% static 'blog/icons/file-earmark-plus.svg' %}" alt="Ícone">
+            </a>
                 <h1><a href="/">Django Girls Blog</a></h1>
             </div>
         </header>
