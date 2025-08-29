@@ -9,8 +9,5 @@
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
             <p> a{{ post.text|linebreaksbr }}</p>
         </article>
-            <article class="post"> 
-                <h2> <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque voluptas placeat id expedita est quia commodi quam quae blanditiis possimus, nam sed similique eligendi quasi odio molestiae mollitia ut.</p></h2>
-            </article>
     {% endfor %}
 {% endblock %}
