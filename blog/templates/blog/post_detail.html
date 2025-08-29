@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <article class="post">
+        {% if post.published_date %}
+            <time class="date">
+                {{ post.published_date }}
+            </time>
+        {% endif %}
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </article>
+    <article class="post">
+        <a class="btn btn-secondary" href="{% url 'post_list' %}">Back to list</a>
+        <h2> <p> Primeiro Post</p></h2>
+    </article>
+{% endblock %}
