@@ -1,0 +1,15 @@
+17/08/09
+
+Feito
+1-Tutorial do django
+2-Acessar Figma
+3-Esqueleto do Site feito
+4-
+
+#A Fazer:
+1- Continuar o layout e Renderização do Site da Prefeitura
+2- Pegar o link e referências das imagens para o site da Prefeitura
+3- Victor fez o "Footer" e a "navbar"
+4- Design System do govBR e Bootstrap
+5-
+

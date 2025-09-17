@@ -68,13 +68,39 @@ h4 {
 .btn-secondary:hover {
     color: #FFFFFF;
     background-color: #2806e7;
-<<<<<<< HEAD
 }
 
 .titulo-post {
   font-family: 'Lobster', cursive;
   font-size: 2rem;
 }
-=======
+
+:root{
+    --primary-blue: #1351b4;
+    --secondary-gray: #F4F3F3;
+    --ink-regular: #464646;
+    --ink-light: #7A7A7A;
 }
->>>>>>> a9b958dd388019eda80a02135633f975e042f3c0
+
+.br-footer{
+    background-color: var(--secondary-gray);
+    color: var(--ink-regular);
+    padding: 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-limit{
+    height: 33px;
+    width: 100%;
+    background-color: #1351b4;
+}
+
+form.d-flex {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  max-width: 300px;
+}
