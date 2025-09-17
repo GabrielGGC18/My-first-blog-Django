@@ -1,0 +1,45 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+  {% if user.is_authenticated %}
+  <div class="text-end mb-4">
+    <a href="{% url 'post_new' %}" class="btn btn-success">
+      <i class="bi bi-file-earmark-plus"></i> Novo Post
+    </a>
+  </div>
+{% endif %}
+
+
+<h1 class="display-4 text-center my-4">Descubra Tocantins: Natureza, Cultura e História</h1>
+
+
+<div class="container mt-4">
+    {% for post in posts %}
+      <div class="card mb-3 shadow-sm">
+        <div class="card-body">
+          <!-- Título do post -->
+          <h2 class="card-title titulo-post">
+            <a href="{% url 'post_detail' pk=post.pk %}" class="text-decoration-none text-dark">{{ post.title }} </a>
+          </h2>
+
+          <!-- Data de publicação -->
+          <p class="text-muted">
+            Publicado em {{ post.published_date|date:"d/m/Y H:i" }}
+          </p>
+
+          <!-- Conteúdo do post -->
+          <p class="card-text">{{ post.text|linebreaksbr }}</p>
+
+          {% if user.is_authenticated %}
+            <!-- Botão de editar -->
+            <a href="{% url 'post_edit' post.pk %}" class="btn btn-sm btn-outline-primary">
+              <i class="bi bi-pencil-square"></i> Editar
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    {% empty %}
+      <p>Rico em belezas naturais e com cidades cheias de história, o Tocantins é um estado que atrai visitantes em busca de aventura e de novos conhecimentos. Do ecoturismo no Jalapão, a praias de rio e passeios pela arquitetura colonial dos municípios mais antigos, quem visita a região se encanta com os atrativos do estado. Roteiros que se estendem durante todo o ano e podem servir de inspiração tanto para quem vem ao Tocantins pela primeira vez, quanto para quem mora no estado mas ainda não conhece as riquezas da região. Na região central, uma série de cidades se desponta. Além da capital, parada obrigatória para qualquer turista, municípios do entorno também se destacam como roteiro histórico-cultural. Passeios simples, que não demandam muito tempo ou planejamento e podem surpreender! Cidade planejada, de avenidas largas e grandes rotatórias que servem de lindos jardins, Palmas, a mais nova capital do país, está situada entre a serra e um esplendoroso lago formado pelo rio Tocantins, que dá nome ao Estado. Nesta cidade, o turista pode passear pela segunda maior Praça da América Latina (a Praça dos Girassóis tem aproximadamente 570.000 m2) e nela encontrar expostos em seu calçamento, feito de pedras portuguesas, símbolos representativos dos povos indígenas do Tocantins, além de encontrar toda a história do Estado nos frisas, paredes e vitrais que adornam o Palácio Araguaia</p>
+    {% endfor %}
+  </div>
+{% endblock %}

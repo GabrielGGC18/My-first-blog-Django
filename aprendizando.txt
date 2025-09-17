@@ -1,0 +1,2 @@
+#Passo 1 - Instalação python, django, git.
+#Passo 2 - Aprendendo a usar o django com construção de linhas de código
