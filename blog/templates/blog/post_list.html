@@ -17,21 +17,20 @@
     {% for post in posts %}
       <div class="card mb-3 shadow-sm">
         <div class="card-body">
-          <!-- Título do post -->
+         
           <h2 class="card-title titulo-post">
             <a href="{% url 'post_detail' pk=post.pk %}" class="text-decoration-none text-dark">{{ post.title }} </a>
           </h2>
 
-          <!-- Data de publicação -->
+   
           <p class="text-muted">
             Publicado em {{ post.published_date|date:"d/m/Y H:i" }}
           </p>
 
-          <!-- Conteúdo do post -->
           <p class="card-text">{{ post.text|linebreaksbr }}</p>
 
           {% if user.is_authenticated %}
-            <!-- Botão de editar -->
+ 
             <a href="{% url 'post_edit' post.pk %}" class="btn btn-sm btn-outline-primary">
               <i class="bi bi-pencil-square"></i> Editar
             </a>

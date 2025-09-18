@@ -1,106 +1,158 @@
-.page-header {
-    background-color: #000dc2;
-    margin-top: 0;
-    margin-bottom: 40px;
-    padding: 20px 20px 20px 40px;
+/* ===================== VARIÁVEIS DE COR ===================== */
+:root {
+  --primary-blue: #1351b4;
+  --govbr-blue: #c3c6f3;
+  --secondary-gray: #F4F3F3;
+  --ink-regular: #464646;
+  --ink-light: #7A7A7A;
 }
 
-.page-header h1,
-.page-header h1 a,
-.page-header h1 a:visited,
-.page-header h1 a:active {
-    color: #ffffff;
-    font-size: 36pt;
-    text-decoration: none;
+/* ===================== RESET E BASE ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4 {
-    font-family: 'Lobster', cursive;
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--secondary-gray);
+  color: var(--ink-regular);
+  line-height: 1.6;
 }
 
-.date {
-    color: #828282;
+/* ===================== NAVEGAÇÃO ===================== */
+.navbar {
+  background-color: var(--govbr-blue);
+  padding: 1rem 2rem;
 }
 
-.save {
-    float: right;
+.navbar-brand img {
+  margin-right: 1rem;
 }
 
-.post-form textarea,
-.post-form input {
-    width: 100%;
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-.top-menu,
-.top-menu:hover,
-.top-menu:visited {
-    color: #ffffff;
-    float: right;
-    font-size: 26pt;
-    margin-right: 20px;
+.nav a {
+  color: #ffffff;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.5rem;
 }
 
-.post {
-    margin-bottom: 70px;
+.nav a:hover {
+  text-decoration: underline;
 }
 
-.post h2 a,
-.post h2 a:visited {
-    color: #000000;
+.divisoria {
+  border: none;
+  border-top: 2px solid var(--primary-blue);
+  width: 100%;
+  margin: 1rem 0;
 }
 
-.post > .date,
-.post > .actions {
-    float: right;
+/* ===================== CONTEÚDO PRINCIPAL ===================== */
+.container {
+  margin-top: 8rem;
 }
 
-.btn-secondary,
-.btn-secondary:visited {
-    color: #0d00c2;
-    background: none;
-    border-color: #190af5;
-    margin-left: 15px;
+.Relogio img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
-.btn-secondary:hover {
-    color: #FFFFFF;
-    background-color: #2806e7;
+/* ===================== RODAPÉ ===================== */
+.br-footer {
+  background-color: var(--secondary-gray);
+  color: var(--ink-regular);
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-limit {
+  height: 33px;
+  width: 100%;
+  background-color: var(--primary-blue);
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+/* ===================== TIPOGRAFIA ===================== */
+h1, h2, h3, h4 {
+  font-family: 'Lobster', cursive;
+  color: var(--primary-blue);
 }
 
 .titulo-post {
-  font-family: 'Lobster', cursive;
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-:root{
-    --primary-blue: #1351b4;
-    --secondary-gray: #F4F3F3;
-    --ink-regular: #464646;
-    --ink-light: #7A7A7A;
+/* ===================== BOTÕES ===================== */
+.btn-secondary {
+  color: var(--govbr-blue);
+  background: none;
+  border: 2px solid #190af5;
+  margin-left: 15px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
-.br-footer{
-    background-color: var(--secondary-gray);
-    color: var(--ink-regular);
-    padding: 0;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+.btn-secondary:hover {
+  color: #ffffff;
+  background-color: #2806e7;
 }
 
-.footer-limit{
-    height: 33px;
-    width: 100%;
-    background-color: #1351b4;
+/* ===================== FORMULÁRIOS ===================== */
+.post-form textarea,
+.post-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-form.d-flex {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  max-width: 300px;
+/* ===================== COMPONENTES GOVBR ===================== */
+.br-card {
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* ===================== RESPONSIVIDADE ===================== */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-brand img {
+    margin-bottom: 1rem;
+  }
+
+  .container {
+    margin-top: 10rem;
+  }
+
+  .Relogio img {
+    max-width: 90%;
+  }
 }

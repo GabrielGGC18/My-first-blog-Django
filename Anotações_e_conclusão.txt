@@ -1,15 +1,30 @@
 17/08/09
 
-Feito
-1-Tutorial do django
-2-Acessar Figma
-3-Esqueleto do Site feito
-4-
+Feito✅ 
+1-Tutorial do django✅ 
+2-Acessar Figma✅ 
+3-Esqueleto do Site feito✅ 
+4-Desig System importado para o django✅ 
+5- Site de Ajuda ✅"https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Home_page"
+
+
+
+
 
 #A Fazer:
 1- Continuar o layout e Renderização do Site da Prefeitura
 2- Pegar o link e referências das imagens para o site da Prefeitura
 3- Victor fez o "Footer" e a "navbar"
 4- Design System do govBR e Bootstrap
-5-
+5-Adicionar os icones das Redes socias no canto superior direito
+6-Aba de Pesquisar
+7-Linkas as abas da parte superior do site 
+8-Estilizar o site, colocando as divisórias das logos, canto superior e inferior.
+9-Aumentar e melhorar os espaços entre as logos
+10-Aplicar as Classes no "br-item "no site
 
+11-Cabeçalho com menu horizontal (Design System)
+12-Imagem de destaque central
+13-Coluna lateral esquerda com “Acesso Rápido”
+14-Coluna lateral direita com notícias
+15-Rodapé institucional
