@@ -1,8 +1,8 @@
 /* ===================== VARIÁVEIS DE COR ===================== */
 :root {
   --primary-blue: #1351b4;
-  --govbr-blue: #c3c6f3;
-  --secondary-gray: #F4F3F3;
+  --govbr-blue: #e9e8f0;
+  --secondary-gray: #fbfaff;
   --ink-regular: #464646;
   --ink-light: #7A7A7A;
 }
@@ -15,56 +15,161 @@
 }
 
 body {
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
   font-family: 'Roboto', sans-serif;
   background-color: var(--secondary-gray);
   color: var(--ink-regular);
   line-height: 1.6;
 }
 
+
 /* ===================== NAVEGAÇÃO ===================== */
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   background-color: var(--govbr-blue);
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .container {
+  display: center;
+
+}
+
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .navbar-brand img {
-  margin-right: 1rem;
+  max-height: 70px;
 }
 
-.nav {
+.nav-links {
   display: flex;
+  gap: 1.5rem;
   align-items: center;
-  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.nav a {
-  color: #ffffff;
-  font-size: 1rem;
+.nav-links a {
+  color: var(--ink-regular);
   text-decoration: none;
-  padding: 0.5rem;
+  font-weight: 600;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
 }
 
-.nav a:hover {
-  text-decoration: underline;
-}
-
-.divisoria {
-  border: none;
-  border-top: 2px solid var(--primary-blue);
-  width: 100%;
-  margin: 1rem 0;
+.nav-links a:hover {
+  border-bottom: 2px solid var(--primary-blue);
 }
 
 /* ===================== CONTEÚDO PRINCIPAL ===================== */
 .container {
-  margin-top: 8rem;
+  margin-top: 2rem;
+}
+
+.Relogio {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .Relogio img {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* ===================== BLOCO DE ACESSO RÁPIDO GOVBR ===================== */
+.br-tab {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+
+.tab-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.br-button {
+  background-color: var(--govbr-blue);
+  border: 1px solid var(--primary-blue);
+  color: var(--primary-blue);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.br-button:hover {
+  background-color: #d0d0e0;
+}
+
+.br-button.is-active {
+  background-color: var(--primary-blue);
+  color: #fff;
+}
+
+.tab-panel {
+  display: none;
+  padding: 1rem;
+}
+
+.tab-panel.is-active {
+  display: block;
+}
+
+.br-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.br-list li {
+  margin-bottom: 0.75rem;
+}
+
+.br-list .br-item {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s ease;
+}
+
+.br-list .br-item:hover {
+  background-color: #f5f5f5;
+  text-decoration: underline;
+}
+
+/* ===================== DIVISÓRIA GOVBR ===================== */
+.br-divider {
+  border-top: 2px solid var(--primary-blue);
+  width: 100%;
+  margin: 2rem 0;
 }
 
 /* ===================== RODAPÉ ===================== */
@@ -78,8 +183,36 @@ body {
   width: 100%;
 }
 
+.br-footer .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.br-footer .row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.br-footer .col-md-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.br-footer img {
+  display: block;
+  margin: 0.25rem auto;
+}
+
 .footer-limit {
-  height: 33px;
+  height: 10px;
   width: 100%;
   background-color: var(--primary-blue);
 }
@@ -92,67 +225,46 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* ===================== TIPOGRAFIA ===================== */
-h1, h2, h3, h4 {
-  font-family: 'Lobster', cursive;
-  color: var(--primary-blue);
-}
-
-.titulo-post {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-/* ===================== BOTÕES ===================== */
-.btn-secondary {
-  color: var(--govbr-blue);
-  background: none;
-  border: 2px solid #190af5;
-  margin-left: 15px;
-  padding: 8px 16px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-.btn-secondary:hover {
-  color: #ffffff;
-  background-color: #2806e7;
-}
-
-/* ===================== FORMULÁRIOS ===================== */
-.post-form textarea,
-.post-form input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* ===================== COMPONENTES GOVBR ===================== */
-.br-card {
-  background-color: #fff;
-  border-radius: 6px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.05);
-  padding: 1rem;
-  margin-bottom: 2rem;
-}
-
 /* ===================== RESPONSIVIDADE ===================== */
+@media (max-width: 992px) {
+  .br-footer .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .br-footer .col-md-3 {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
 @media (max-width: 768px) {
-  .nav {
+  .navbar {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .navbar-brand img {
+  .navbar-brand {
     margin-bottom: 1rem;
-  }
-
-  .container {
-    margin-top: 10rem;
   }
 
   .Relogio img {
     max-width: 90%;
+  }
+
+  .tab-nav {
+    flex-direction: column;
+  }
+
+  .br-button {
+    width: 100%;
+    text-align: left;
+  }
+
+  .br-tab {
+    padding: 1rem;
+  }
+
+  .br-list {
+    max-width: 100%;
   }
 }
