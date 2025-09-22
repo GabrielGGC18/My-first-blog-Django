@@ -1,7 +1,7 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  {% load static %}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prefeitura de Palmas</title>
@@ -14,63 +14,80 @@
 <body>
 
   <!-- 🔝 Navbar -->
-  <nav class="teste1 navbar navbar-expand-lg fixed-top">
-    <div class=" teste2 container-fluid d-flex align-items-center justify-content-between">
-    <a class=" teste3 navbar-brand d-flex align-items-center" href="#">
-        <img src="{% static 'assets/logo_municipio.png' %}" width="73" height="75" alt="Logo Município">
-        <img src="{% static 'assets/logo_palmas.png' %}" width="181" height="70" alt="Logo Palmas" class="ms-3">
-      </a>
-      <div class="nav-links d-flex">
-        <a href="serviços.html">Serviços</a>
-        <a href="notícias.html">Notícias</a>
-        <a href="transparência.html">Transparência</a>
-        <a href="orgaos.html">Órgãos</a>
-        <a href="ouvidoria.html">Ouvidoria</a>
-        <a href="diario_oficial.html">Diário Oficial</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- 🖼️ Imagem Central -->
-  <main class="container mt-5 pt-5">
-    <div class="Relogio row justify-content-center">
-      <img src="{% static 'assets/relógio_palmas.jpg' %}" class="img-fluid rounded" alt="Relógio das Flores">
+<nav class="navbar fixed-top">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+    <div class="navbar-brand d-flex align-items-center">
+      <img src="{% static 'assets/logo_municipio.png' %}" width="73" height="75" alt="Logo Município">
+      <img src="{% static 'assets/logo_palmas.png' %}" width="181" height="70" alt="Logo Palmas" class="ms-3">
     </div>
 
-    <!-- ⚡ Bloco de Acesso Rápido -->
-    <section class="br-tab mt-5">
+    <div class="nav-links d-flex justify-content-center flex-grow-1">
+      <a href="serviços.html">Serviços</a>
+      <a href="notícias.html">Notícias</a>
+      <a href="transparência.html">Transparência</a>
+      <a href="orgaos.html">Órgãos</a>
+      <a href="ouvidoria.html">Ouvidoria</a>
+      <a href="diario_oficial.html">Diário Oficial</a>
+    </div>
+
+    <div id="divBusca">
+      <img src="{% static 'assets/css/icons/search.svg' %}" id="btnBusca" alt="Buscar">
+      <input type="text" id="search-icon" placeholder="Pesquisar">
+    
+      <button type="button" class="btn btn-default"> 
+      <div class="nav-placeholder" style="width:177px;"></div> <!-- mesma largura da logo -->
+    </div>
+</nav>
+<main class="layout-principal d-flex">
+    <!--Menu Lateral--> 
+  <section class="menu-lateral">
+   <section class="br-tab mt-5">
+    <div class="row">
+    <!-- 🔹 Menu lateral -->
+    <article class="aba lateral">  
+      <h2>Acesso Rápido</h2>
+    </article>
+    <aside class="tab-sidebar">
       <nav class="tab-nav">
         <button class="br-button is-active" data-panel="cidadao">Cidadão</button>
-        <button class="br-button" data-panel="empresa">Empresa</button>     
+        <button class="br-button" data-panel="empresa">Empresa</button>
         <button class="br-button" data-panel="servidor">Servidor</button>
       </nav>
-
-      <div class="tab-panel is-active" id="cidadao">       
+    </aside>
+       <!--🔸Conteúdo-->
+    <div class=" tab-content-area">
+      <div class="tab-panel is-active" id="cidadao">
         <ul class="br-list">
-          <li><a href="#" class="br-item">Nota Fiscal</a></li>
-          <li><a href="#" class="br-item">Consulta CCI</a></li>
-          <li><a href="#" class="br-item">Emissão de IPTU</a></li>
-          <li><a href="#" class="br-item">Resolve Palmas</a></li>
-          <li><a href="#" class="br-item">Certidão Negativa de Débitos</a></li>
+          <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Nota Fiscal</a></li>
+          <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Consulta CCI</a></li>
+          <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Emissão de IPTU</a></li>
+          <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Resolve Palmas</a></li>
+          <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Certidão Negativa de Débitos</a></li>
         </ul>
       </div>
 
-      <div class="tab-panel" id="empresa">   
+      <div class="tab-panel" id="empresa">
         <ul class="br-list">
-          <li><a href="#" class="br-item">Alvarás</a></li>
-          <li><a href="#" class="br-item">Portal do Contribuinte</a></li>
+          <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Alvarás</a></li>
+          <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Portal do Contribuinte</a></li>
         </ul>
       </div>
 
       <div class="tab-panel" id="servidor">
         <ul class="br-list">
-          <li><a href="#" class="br-item">Portal do Servidor</a></li>
-          <li><a href="#" class="br-item">Diário Oficial</a></li>
+          <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Portal do Servidor</a></li>
+          <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Diário Oficial</a></li>
         </ul>
       </div>
-    </section>
+    </div>
+  </section>
+</section>
+  <!-- 🖼️ Imagem Central -->
+    <div class="Relogio row justify-content-center">
+      <img src="{% static 'assets/relógio_palmas.jpg' %}" class="img-fluid rounded" alt="Relógio das Flores">
+      <strong class ="embaixo-img">#Tag #Zeladoria Urbana </strong>.</p>
+    </div>
   </main>
-
   <!-- 🧭 Rodapé -->
   <footer class="br-footer mt-5" role="contentinfo">
     <div class="container py-4">
@@ -92,10 +109,10 @@
         <div class="col-md-3">
           <h5>Redes sociais</h5>
           <ul class="list-unstyled">
-            <li><a href="https://www.instagram.com/cidadepalmas/">Instagram</a></li>
-            <li><a href="https://www.facebook.com/cidade.palmas/">Facebook</a></li>
-            <li><a href="https://x.com/cidadepalmas">Twitter</a></li>
-            <li><a href="https://www.youtube.com/channel/UC8cvTiXKsKwgvQdZ7h0EUEg">Youtube</a></li>
+            <a href="https://www.instagram.com/cidadepalmas/"><img src="{%static 'assets/css/icons/instagram.svg' %}" alt="instagram"><br></a>
+            <a href="https://www.facebook.com/cidade.palmas/"><img src="{%static 'assets/css/icons/facebook.svg' %}" alt="facebook"><br></a>
+            <a href="https://x.com/cidadepalmas"><img src="{%static 'assets/css/icons/twitter-x.svg' %}" alt="twitter"><br></a>
+            <a href="https://www.youtube.com/channel/UC8cvTiXKsKwgvQdZ7h0EUEg"><img src="{%static 'assets/css/icons/youtube.svg' %}"></a>
           </ul>
         </div>
         <div class="col-md-3">

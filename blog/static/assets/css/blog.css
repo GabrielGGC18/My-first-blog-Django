@@ -2,7 +2,7 @@
 :root {
   --primary-blue: #1351b4;
   --govbr-blue: #e9e8f0;
-  --secondary-gray: #fbfaff;
+  --secondary-gray: #ffffff;
   --ink-regular: #464646;
   --ink-light: #7A7A7A;
 }
@@ -18,7 +18,7 @@ body {
   padding-top: 40px;
   padding-left: 20px;
   padding-right: 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: var(--secondary-gray);
   color: var(--ink-regular);
   line-height: 1.6;
@@ -35,16 +35,12 @@ body {
   background-color: var(--govbr-blue);
   padding: 0.5rem 1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.container-fluid {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.navbar .container {
-  display: center;
-
-}
-
-
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -59,7 +55,8 @@ body {
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 .nav-links a {
@@ -74,6 +71,44 @@ body {
 .nav-links a:hover {
   border-bottom: 2px solid var(--primary-blue);
 }
+
+#divBusca{
+  display: flex;
+  background-color: black;
+  border: solid;
+  border-radius: 15px;
+  width: 150px;
+
+}
+#btnBusca{
+  padding: relative;
+  width: 250px;
+}
+
+#txtBusca{
+  float:left;
+  border: 1px solid #ccc;
+  border-radius:4px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-style:'Inter';
+  font-size:18px;
+  height: 177px;
+  width: 54px;
+  padding: 0.5rem 2rem 0.75rem;
+}
+
+#search-icon{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width:50px;
+  height: 25px;
+
+}
+
 
 /* ===================== CONTEÚDO PRINCIPAL ===================== */
 .container {
@@ -92,8 +127,46 @@ body {
   border-radius: 8px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
+.embaixo-img {
+  text-align:center;
+  font-family:'Inter', sans-serif;
+  color: var(--ink-regular);
+}
+
 
 /* ===================== BLOCO DE ACESSO RÁPIDO GOVBR ===================== */
+.h2{
+  text-align: center;
+  font-family:'Inter', sans-serif;
+  border-top: 2px #001CC9;  
+  background-attachment: fixed;  
+}
+.br-tab {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+.tab-sidebar {
+  position: sticky;
+  top: 140px;
+}
+.tab-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.br-button {
+  border: 1px solid var(--primary-blue);
+  color: var(--primary-blue);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
 .br-tab {
   max-width: 1000px;
   margin: 2rem auto;
@@ -103,12 +176,17 @@ body {
   box-shadow: 0 0 6px rgba(0,0,0,0.05);
 }
 
-.tab-nav {
+.tab-sidebar {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap: 1rem;
+  position: sticky;
+  top: 140px; /* ajusta conforme altura do navbar */
+}
+
+.tab-nav {
+  display: fixed;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
 }
 
 .br-button {
@@ -118,8 +196,50 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
+  text-align: left;
   transition: background-color 0.3s ease;
 }
+
+.br-button.is-active {
+  background-color: var(--primary-blue);
+  color: #fff;
+}
+
+.tab-content-area {
+  padding-left: 2rem;
+}
+
+.tab-panel {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tab-panel.is-active {
+  display: block;
+  opacity: 1;
+}
+
+.br-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.br-list .br-item {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--primary-blue);
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s ease;
+}
+
+.br-list .br-item:hover {
+  background-color: #f5f5f5;
+  text-decoration: underline;
+}
+
 
 .br-button:hover {
   background-color: #d0d0e0;
@@ -163,6 +283,28 @@ body {
 .br-list .br-item:hover {
   background-color: #f5f5f5;
   text-decoration: underline;
+}
+.menu-lateral {
+  position: sticky;
+  top: 140px;
+}
+.layout-principal {
+  display: flex;
+  gap: 2rem;
+  margin-top: 6rem; /* compensa a navbar fixa */
+  padding: 0 2rem;
+}
+
+.menu-lateral {
+  width: 300px;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+
+.conteudo-principal {
+  flex-grow: 1;
 }
 
 /* ===================== DIVISÓRIA GOVBR ===================== */
@@ -225,6 +367,10 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.list-unstyled{
+  list-style:none;
+  padding: 0;
+}
 /* ===================== RESPONSIVIDADE ===================== */
 @media (max-width: 992px) {
   .br-footer .row {
@@ -259,7 +405,12 @@ body {
     width: 100%;
     text-align: left;
   }
-
+  
+  .tab-sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .br-tab {
     padding: 1rem;
   }
