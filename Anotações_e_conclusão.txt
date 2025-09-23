@@ -16,6 +16,8 @@ Feito✅
 12-Coluna lateral direita com notícias✅ 
 2- Pegar o link e referências das imagens para o site da Prefeitura✅
 6-Aba de Pesquisar✅
+22-Adição de elementos no text mais notícias(width: 57;)✅
+17-Colocar o "cidadão", "Empresa", "Servidor", na parte lateral da página(ao lado da foto do Relógio).✅
 
 #A Fazer:
 5-Adicionar os icones das Redes socias no canto superior direito
@@ -23,7 +25,6 @@ Feito✅
 9-Aumentar e melhorar os espaços entre as logos
 15-Rodapé institucional
 16-ícones de Redes Sociais na Página
-17-Colocar o "cidadão", "Empresa", "Servidor", na parte lateral da página(ao lado da foto do Relógio).
 18- Fazer o site por inteiro igual no Figma
 19- Adicionar Outra foto com o aumento da página
 20-Adição de 13 fotos(Sendo 9 notícias e 4 fotos de paisagem) - colocar a foto do espaço cultural de fundo, adicionando uma parte(Azul background: #1D4D8B;)
@@ -33,22 +34,15 @@ Feito✅
     font-size: 16px;
     leading-trim: NONE;
     line-height: 24px;
-   letter-spacing: 0%;)
-22-Adição de elementos no text mais notícias(width: 57;
-    height: 433;
-    top: 1595px;
-    left: 230px;
-    angle: 0 deg;
-    opacity: 1;)
+   letter-spacing: 0%;)  
 23-Dimensões ícones parte superior da Página:
-
 Instagram                   
 width: 50;
 height: 50; 
 top: 191.76px;
 left: 1485.22px;
 angle: 0 deg;
-opacity: 1;
+opacity: 1; 
 
 Twitter(X)
 width: 41;
@@ -82,4 +76,13 @@ left: 1711.22px;
 angle: 0 deg;
 opacity: 1;
 
-24-
+24-Adição dos elementos atrás das palavras(aba lateral):
+width: 310;
+height: 56;
+top: 521px;
+left: 57px;
+angle: 0 deg;
+opacity: 1;
+
+Cor(background: #F0F0F0;
+)

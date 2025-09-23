@@ -24,6 +24,16 @@ body {
   line-height: 1.6;
 }
 
+html, body {
+  height: 100%;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
 
 /* ===================== NAVEGAÇÃO ===================== */
 .navbar {
@@ -36,11 +46,13 @@ body {
   padding: 0.5rem 1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
 .container-fluid {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -72,120 +84,43 @@ body {
   border-bottom: 2px solid var(--primary-blue);
 }
 
-#divBusca{
+/* ============ Barra de Busca =========== */
+#divBusca {
   display: flex;
-  background-color: black;
+  background-color: rgb(253, 249, 249);
   border: solid;
-  border-radius: 15px;
+  border-radius: 300px;
   width: 150px;
-
-}
-#btnBusca{
-  padding: relative;
-  width: 250px;
 }
 
-#txtBusca{
-  float:left;
-  border: 1px solid #ccc;
-  border-radius:4px;
-  outline: none;
+#btnBusca {
+  position: relative;
+  width: 25px;
+}
+
+#search-icon {
   border: none;
   background-color: transparent;
-  font-style:'Inter';
-  font-size:18px;
-  height: 177px;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  height: 27px;
   width: 54px;
   padding: 0.5rem 2rem 0.75rem;
 }
 
-#search-icon{
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  width:50px;
-  height: 25px;
-
-}
-
-
-/* ===================== CONTEÚDO PRINCIPAL ===================== */
-.container {
+/* ===================== COMPONENTES GOVBR ===================== */
+.br-tab {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
   margin-top: 2rem;
 }
 
-.Relogio {
+.br-tab .tab-nav {
   display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.Relogio img {
-  max-width: 50%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-}
-.embaixo-img {
-  text-align:center;
-  font-family:'Inter', sans-serif;
-  color: var(--ink-regular);
-}
-
-
-/* ===================== BLOCO DE ACESSO RÁPIDO GOVBR ===================== */
-.h2{
-  text-align: center;
-  font-family:'Inter', sans-serif;
-  border-top: 2px #001CC9;  
-  background-attachment: fixed;  
-}
-.br-tab {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #fff;
-  border-radius: 6px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.05);
-}
-.tab-sidebar {
-  position: sticky;
-  top: 140px;
-}
-.tab-nav {
-  display: flex;
-  flex-direction: column;
-}
-
-.br-button {
-  border: 1px solid var(--primary-blue);
-  color: var(--primary-blue);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  text-align: left;
-  transition: background-color 0.3s ease;
-}
-.br-tab {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #fff;
-  border-radius: 6px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.05);
-}
-
-.tab-sidebar {
-  display: flex;
-  flex-direction: column;
   gap: 1rem;
-  position: sticky;
-  top: 140px; /* ajusta conforme altura do navbar */
-}
-
-.tab-nav {
-  display: fixed;
+  margin-bottom: 1rem;
   flex-wrap: wrap;
 }
 
@@ -196,17 +131,16 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
-  text-align: left;
   transition: background-color 0.3s ease;
+}
+
+.br-button:hover {
+  background-color: #d0d0e0;
 }
 
 .br-button.is-active {
   background-color: var(--primary-blue);
   color: #fff;
-}
-
-.tab-content-area {
-  padding-left: 2rem;
 }
 
 .tab-panel {
@@ -223,56 +157,13 @@ body {
 .br-list {
   list-style: none;
   padding-left: 0;
-  margin: 0;
 }
 
 .br-list .br-item {
-  display: block;
-  padding: 0.5rem 1rem;
-  color: var(--primary-blue);
-  text-decoration: none;
-  border-bottom: 1px solid #eee;
-  transition: background-color 0.2s ease;
-}
-
-.br-list .br-item:hover {
-  background-color: #f5f5f5;
-  text-decoration: underline;
-}
-
-
-.br-button:hover {
-  background-color: #d0d0e0;
-}
-
-.br-button.is-active {
-  background-color: var(--primary-blue);
-  color: #fff;
-}
-
-.tab-panel {
-  display: none;
-  padding: 1rem;
-}
-
-.tab-panel.is-active {
-  display: block;
-}
-
-.br-list {
-  list-style: none;
-  padding-left: 0;
-  margin: 0 auto;
-  max-width: 600px;
-}
-
-.br-list li {
-  margin-bottom: 0.75rem;
-}
-
-.br-list .br-item {
-  display: block;
-  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
   color: var(--primary-blue);
   text-decoration: none;
   font-weight: 500;
@@ -284,34 +175,160 @@ body {
   background-color: #f5f5f5;
   text-decoration: underline;
 }
+
+/* ===================== MENU LATERAL ===================== */
 .menu-lateral {
   position: sticky;
-  top: 140px;
+  top: 120px;
+  width: 260px;
+  background-color: #f8f9fa;
+  padding: 1.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
+
+.menu-lateral h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-lateral li {
+  margin-bottom: 0.7rem;
+}
+
+.menu-lateral a {
+  color: var(--ink-regular);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+  display: block;
+}
+
+.menu-lateral a:hover,
+.menu-lateral a.active {
+  background: var(--primary-blue);
+  color: #fff;
+}
+
+/* ===================== CONTEÚDO PRINCIPAL ===================== */
 .layout-principal {
   display: flex;
   gap: 2rem;
-  margin-top: 6rem; /* compensa a navbar fixa */
+  margin-top: 6rem;
   padding: 0 2rem;
 }
 
-.menu-lateral {
-  width: 300px;
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 6px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.05);
-}
-
-.conteudo-principal {
+.container-cima {
   flex-grow: 1;
 }
 
-/* ===================== DIVISÓRIA GOVBR ===================== */
-.br-divider {
-  border-top: 2px solid var(--primary-blue);
+.Coral-GMP {
   width: 100%;
-  margin: 2rem 0;
+  max-width: 962px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.Relogio {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.Relogio img {
+  width: 100%;
+  max-width: 962px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.embaixo-img {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: var(--ink-regular);
+}
+
+/* ===================== PARTE BAIXO E NOTÍCIAS ===================== */
+.parte-baixo {
+  margin: 3rem auto 0 auto;
+  padding: 0 1rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.SEBEM {
+  width: 100%;
+  max-width: 1532px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.Noticias-section > .noticias-horizontal {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 2rem 0;
+}
+
+.noticia-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 280px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.card-noticia {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.noticia-titulo {
+  margin-top: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-regular);
+  font-size: 0.95rem;
+}
+
+/* ===================== GALERIA DE FOTOS ===================== */
+.galeria-fotos,
+.Cachoeira,
+.criancas,
+.ponte,
+.Foto_flor {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.galeria-fotos img,
+.Cachoeira img,
+.criancas img,
+.ponte img,
+.Foto_flor img {
+  max-width: 100%;
+  border-radius: 8px;
 }
 
 /* ===================== RODAPÉ ===================== */
@@ -320,12 +337,13 @@ body {
   color: var(--ink-regular);
   padding: 2rem 0;
   text-align: center;
-  position: relative;
   bottom: 0;
   width: 100%;
 }
 
 .br-footer .container {
+  position: relative;
+  bottom: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -367,55 +385,67 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.list-unstyled{
-  list-style:none;
+.list-unstyled {
+  list-style: none;
   padding: 0;
 }
+
+/* ===================== DIVISÓRIA GOVBR ===================== */
+.br-divider {
+  border-top: 2px solid var(--primary-blue);
+  width: 100%;
+  margin: 2rem 0;
+}
+
 /* ===================== RESPONSIVIDADE ===================== */
+@media (max-width: 1200px) {
+  .layout-principal {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  .menu-lateral {
+    width: 100%;
+    position: static;
+    margin-bottom: 1rem;
+  }
+}
+
 @media (max-width: 992px) {
   .br-footer .row {
     flex-direction: column;
     align-items: center;
   }
-
   .br-footer .col-md-3 {
     width: 100%;
-    margin-bottom: 2rem;
-  }
-}
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar-brand {
+    align-items: center;
     margin-bottom: 1rem;
   }
+  .container-cima,
+  .SEBEM {
+    max-width: 100%;
+  }
+}
 
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .navbar-brand img {
+    margin-bottom: 1rem;
+  }
+  .container {
+    margin-top: 10rem;
+  }
   .Relogio img {
     max-width: 90%;
   }
-
-  .tab-nav {
+  .br-tab .tab-nav {
     flex-direction: column;
   }
-
   .br-button {
     width: 100%;
     text-align: left;
-  }
-  
-  .tab-sidebar {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .br-tab {
-    padding: 1rem;
-  }
-
-  .br-list {
-    max-width: 100%;
   }
 }

@@ -13,14 +13,13 @@
 </head>
 <body>
 
-  <!-- 🔝 Navbar -->
+<!-- 🔝 Navbar -->
 <nav class="navbar fixed-top">
   <div class="container-fluid d-flex align-items-center justify-content-between">
     <div class="navbar-brand d-flex align-items-center">
       <img src="{% static 'assets/logo_municipio.png' %}" width="73" height="75" alt="Logo Município">
       <img src="{% static 'assets/logo_palmas.png' %}" width="181" height="70" alt="Logo Palmas" class="ms-3">
     </div>
-
     <div class="nav-links d-flex justify-content-center flex-grow-1">
       <a href="serviços.html">Serviços</a>
       <a href="notícias.html">Notícias</a>
@@ -33,115 +32,160 @@
     <div id="divBusca">
       <img src="{% static 'assets/css/icons/search.svg' %}" id="btnBusca" alt="Buscar">
       <input type="text" id="search-icon" placeholder="Pesquisar">
-    
-      <button type="button" class="btn btn-default"> 
-      <div class="nav-placeholder" style="width:177px;"></div> <!-- mesma largura da logo -->
+      <button type="button" class="btn btn-default" aria-label="Buscar"></button>
+      <div class="nav-placeholder" style="width:177px;"></div>
     </div>
+  </div>
 </nav>
+
 <main class="layout-principal d-flex">
-    <!--Menu Lateral--> 
+  <!-- 🔹 Menu Lateral -->
   <section class="menu-lateral">
-   <section class="br-tab mt-5">
     <div class="row">
-    <!-- 🔹 Menu lateral -->
-    <article class="aba lateral">  
-      <h2>Acesso Rápido</h2>
-    </article>
-    <aside class="tab-sidebar">
-      <nav class="tab-nav">
-        <button class="br-button is-active" data-panel="cidadao">Cidadão</button>
-        <button class="br-button" data-panel="empresa">Empresa</button>
-        <button class="br-button" data-panel="servidor">Servidor</button>
-      </nav>
-    </aside>
-       <!--🔸Conteúdo-->
-    <div class=" tab-content-area">
-      <div class="tab-panel is-active" id="cidadao">
-        <ul class="br-list">
-          <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Nota Fiscal</a></li>
-          <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Consulta CCI</a></li>
-          <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Emissão de IPTU</a></li>
-          <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Resolve Palmas</a></li>
-          <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Certidão Negativa de Débitos</a></li>
-        </ul>
-      </div>
+      <article class="aba lateral">  
+        <h2>Acesso Rápido</h2>
+      </article>
+      <aside class="tab-sidebar">
+        <nav class="tab-nav">
+          <button class="br-button is-active" data-panel="cidadao">Cidadão</button>
+          <button class="br-button" data-panel="empresa">Empresa</button>
+          <button class="br-button" data-panel="servidor">Servidor</button>
+        </nav>
+      </aside>
+      <div class="tab-content-area">
+        <div class="tab-panel is-active" id="cidadao">
+          <ul class="br-list">
+            <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Nota Fiscal</a></li>
+            <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Consulta CCI</a></li>
+            <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Emissão de IPTU</a></li>
+            <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Resolve Palmas</a></li>
+            <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Certidão Negativa de Débitos</a></li>
+          </ul>
+        </div>
 
-      <div class="tab-panel" id="empresa">
-        <ul class="br-list">
-          <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Alvarás</a></li>
-          <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Portal do Contribuinte</a></li>
-        </ul>
-      </div>
+        <div class="tab-panel" id="empresa">
+          <ul class="br-list">
+            <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Alvarás</a></li>
+            <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Portal do Contribuinte</a></li>
+          </ul>
+        </div>
 
-      <div class="tab-panel" id="servidor">
-        <ul class="br-list">
-          <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Portal do Servidor</a></li>
-          <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Diário Oficial</a></li>
-        </ul>
+        <div class="tab-panel" id="servidor">
+          <ul class="br-list">
+            <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Portal do Servidor</a></li>
+            <li><a href="#" class="br-item"><img src="{% static 'assets/css/icons/arrow-right.svg' %}" alt="seta" class="my-2">Diário Oficial</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
-</section>
+
   <!-- 🖼️ Imagem Central -->
+  <div class="container-cima">
+    <div class="Coral-GMP">
+      <img src="{% static 'assets/Coral_GMP.png' %}" class="Imagem-Acima-relogio" alt="acima do relógio">
+    </div>
+
     <div class="Relogio row justify-content-center">
       <img src="{% static 'assets/relógio_palmas.jpg' %}" class="img-fluid rounded" alt="Relógio das Flores">
-      <strong class ="embaixo-img">#Tag #Zeladoria Urbana </strong>.</p>
+      <strong class="embaixo-img" style="margin-top: 1rem;">#Tag #Zeladoria Urbana<br> Relógio das Flores passará por reparos após depredação em Palmas</strong>
     </div>
-  </main>
+  </div>
+
+  <!-- 📣 Parte Baixo -->
+  <div class="parte-baixo">
+    <img src="{% static 'assets/Sebem.jpg' %}" class="SEBEM" alt="Sebem">
+    <div class="Noticias-section">
+     <div class="noticias-horizontal">
+      <div class="noticia-card">
+        <img src="{% static 'assets/prazo_fgts.jpg' %}" alt="FGT" class="card-noticia">
+        <strong class="noticia-titulo">Prefeitura de Palmas encerra fase de degustação de pratos do FGT</strong>
+      </div>
+      <div class="noticia-card">
+        <img src="{% static 'assets/Volta_aulas.jpg' %}" alt="Saúde das Crianças" class="card-noticia">
+        <strong class="noticia-titulo">Prefeitura recomenda cuidados necessários no trânsito durante retorno das férias escolares em Palmas</strong>
+      </div>
+      <div class="noticia-card">
+        <img src="{% static 'assets/Segurança_Trânsito.jpg' %}" alt="Recapeamento" class="card-noticia">
+        <strong class="noticia-titulo">Prefeitura de Palmas executa sinalização viária próxima à rotatória da Avenida NS-02 e Avenida LO-21</strong>
+      </div>
+      <div class="noticia-card">
+        <img src="{% static 'assets/Zeladoria_urbana.jpg' %}" alt="Limpeza Sul" class="card-noticia">
+        <strong class="noticia-titulo">Prefeitura realiza serviços de zeladoria no circuito da 3ª Meia Maratona de Palmas</strong>
+  </div>
+</div>
+<!--Galeria de Fotos-->
+<div class="galeria-fotos">
+  <img src="{% static 'assets/espaco-cultural-de-palmas.jpg' %}" alt="espaço-cultural" class="Fundo-página"> 
+ </div> 
+  <div class="Cachoeira">
+    <img src="{% static 'assets/Foto_Cachoeira.png' %}" alt="cachoeira" class="galeria">
+   </div>
+  <div class ="criancas">
+    <img src="{% static 'assets/crianças.png' %}" alt="crianças-x" class="crianças">
+  </div>
+  <div class ="ponte">
+    <img src="{% static 'assets/Ponte.png' %}" alt="Ponte-x" class="Ponte">
+  </div>
+  <div class="Foto_flor">
+    <img src="{% static 'assets/Foto_flor.png' %}" alt="flores-x" class="flores">
+  </div>
+  
+</main>
   <!-- 🧭 Rodapé -->
-  <footer class="br-footer mt-5" role="contentinfo">
-    <div class="container py-4">
-      <div class="row">
-        <div class="col-md-3 d-flex flex-column align-items-center">
-          <img src="{% static 'assets/logo_palmas.png' %}" width="181" height="70" alt="Logo Palmas">
-          <img src="{% static 'assets/logo_municipio.png' %}" width="73" height="75" alt="Logo Município" class="mb-2">
-        </div>
-        <div class="col-md-3">
-          <h5>Menu</h5>
-          <ul class="list-unstyled">
-            <li><a href="serviços.html">Serviços</a></li>
-            <li><a href="notícias.html">Notícias</a></li>
-            <li><a href="transparência.html">Transparência</a></li>
-            <li><a href="orgaos.html">Órgãos</a></li>
-            <li><a href="ouvidoria.html">Ouvidoria</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <h5>Redes sociais</h5>
-          <ul class="list-unstyled">
-            <a href="https://www.instagram.com/cidadepalmas/"><img src="{%static 'assets/css/icons/instagram.svg' %}" alt="instagram"><br></a>
-            <a href="https://www.facebook.com/cidade.palmas/"><img src="{%static 'assets/css/icons/facebook.svg' %}" alt="facebook"><br></a>
-            <a href="https://x.com/cidadepalmas"><img src="{%static 'assets/css/icons/twitter-x.svg' %}" alt="twitter"><br></a>
-            <a href="https://www.youtube.com/channel/UC8cvTiXKsKwgvQdZ7h0EUEg"><img src="{%static 'assets/css/icons/youtube.svg' %}"></a>
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <h5>Contato</h5>
-          <ul class="list-unstyled text-start">
-            <li><span class="fw-bold">Fone:</span> (63) 99219-9853</li>
-            <li><span class="fw-bold">E-mail:</span> ouvidoria.cgm.pmw@gmail.com</li>
-            <li><span class="fw-bold">Horário:</span> Segunda à Sexta das 7h às 19h</li>
-            <li><span class="fw-bold">Endereço:</span> ACSU-SE 50, Av. NS-02, Conj. 1, Ed. Buriti - 3º Andar</li>
-          </ul>
-        </div>
+<footer class="br-footer mt-5" role="contentinfo">
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-md-3 d-flex flex-column align-items-center">
+        <img src="{% static 'assets/logo_palmas.png' %}" width="181" height="70" alt="Logo Palmas">
+        <img src="{% static 'assets/logo_municipio.png' %}" width="73" height="75" alt="Logo Município" class="mb-2">
+      </div>
+      <div class="col-md-3">
+        <h5>Menu</h5>
+        <ul class="list-unstyled">
+          <li><a href="serviços.html">Serviços</a></li>
+          <li><a href="notícias.html">Notícias</a></li>
+          <li><a href="transparência.html">Transparência</a></li>
+          <li><a href="orgaos.html">Órgãos</a></li>
+          <li><a href="ouvidoria.html">Ouvidoria</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Redes sociais</h5>
+        <ul class="list-unstyled">
+          <li><a href="https://www.instagram.com/cidadepalmas/" aria-label="Instagram"><img src="{% static 'assets/css/icons/instagram.svg' %}" alt="Instagram"></a></li>
+          <li><a href="https://www.facebook.com/cidade.palmas/" aria-label="Facebook"><img src="{% static 'assets/css/icons/facebook.svg' %}" alt="Facebook"></a></li>
+          <li><a href="https://x.com/cidadepalmas" aria-label="Twitter"><img src="{% static 'assets/css/icons/twitter-x.svg' %}" alt="Twitter"></a></li>
+          <li><a href="https://www.youtube.com/channel/UC8cvTiXKsKwgvQdZ7h0EUEg" aria-label="YouTube"><img src="{% static 'assets/css/icons/youtube.svg' %}" alt="YouTube"></a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Contato</h5>
+        <ul class="list-unstyled text-start">
+          <li><span class="fw-bold">Fone:</span> (63) 99219-9853</li>
+          <li><span class="fw-bold">E-mail:</span> ouvidoria.cgm.pmw@gmail.com</li>
+          <li><span class="fw-bold">Horário:</span> Segunda à Sexta das 7h às 19h</li>
+          <li><span class="fw-bold">Endereço:</span> ACSU-SE 50, Av. NS-02, Conj. 1, Ed. Buriti - 3º Andar</li>
+        </ul>
       </div>
     </div>
-    <div class="footer-limit"></div>
-  </footer>
+  </div>
+  <div class="footer-limit"></div>
+</footer>
 
-  <!-- Scripts -->
-  <script src="{% static 'dsgov/js/dsgov.min.js' %}"></script>
-  <script>
-    document.querySelectorAll('.br-button').forEach(button => {
-      button.addEventListener('click', () => {
-        document.querySelectorAll('.br-button').forEach(btn => btn.classList.remove('is-active'));
-        document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('is-active'));
+<!-- Scripts -->
+<script src="{% static 'dsgov/js/dsgov.min.js' %}"></script>
+<script>
+  document.querySelectorAll('.br-button').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.br-button').forEach(btn => btn.classList.remove('is-active'));
+      document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('is-active'));
 
-        button.classList.add('is-active');
-        const panelId = button.getAttribute('data-panel');
-        document.getElementById(panelId).classList.add('is-active');
-      });
+      button.classList.add('is-active');
+      const panelId = button.getAttribute('data-panel');
+      document.getElementById(panelId).classList.add('is-active');
     });
-  </script>
+  });
+</script>
 </body>
 </html>
