@@ -15,9 +15,7 @@
 }
 
 body {
-  padding-top: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 90px;
   font-family: 'Inter', sans-serif;
   background-color: var(--secondary-gray);
   color: var(--ink-regular);
@@ -31,8 +29,9 @@ html, body {
 main {
   flex: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-grow: 1;
+  min-height: 100vh;
 }
 
 /* ===================== NAVEGAÇÃO ===================== */
@@ -43,8 +42,8 @@ main {
   right: 0;
   z-index: 1000;
   background-color: var(--govbr-blue);
-  padding: 0.5rem 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
 
 .container-fluid {
@@ -56,7 +55,7 @@ main {
 .navbar-brand {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .navbar-brand img {
@@ -65,7 +64,7 @@ main {
 
 .nav-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
   flex-grow: 1;
@@ -77,7 +76,7 @@ main {
   font-weight: 600;
   padding: 0.25rem 0;
   border-bottom: 2px solid transparent;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s;
 }
 
 .nav-links a:hover {
@@ -87,107 +86,43 @@ main {
 /* ============ Barra de Busca =========== */
 #divBusca {
   display: flex;
-  background-color: rgb(253, 249, 249);
-  border: solid;
-  border-radius: 300px;
-  width: 150px;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 30px;
+  padding: 0 0.5rem;
+  width: 170px;
+  height: 38px;
 }
 
 #btnBusca {
-  position: relative;
   width: 25px;
+  margin-right: 0.3rem;
 }
 
 #search-icon {
   border: none;
   background-color: transparent;
   font-family: 'Inter', sans-serif;
-  font-size: 18px;
-  height: 27px;
-  width: 54px;
-  padding: 0.5rem 2rem 0.75rem;
-}
-
-/* ===================== COMPONENTES GOVBR ===================== */
-.br-tab {
-  padding: 1rem;
-  background-color: #fff;
-  border-radius: 6px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.05);
-  margin-top: 2rem;
-}
-
-.br-tab .tab-nav {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-}
-
-.br-button {
-  background-color: var(--govbr-blue);
-  border: 1px solid var(--primary-blue);
-  color: var(--primary-blue);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.br-button:hover {
-  background-color: #d0d0e0;
-}
-
-.br-button.is-active {
-  background-color: var(--primary-blue);
-  color: #fff;
-}
-
-.tab-panel {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.tab-panel.is-active {
-  display: block;
-  opacity: 1;
-}
-
-.br-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.br-list .br-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0;
-  color: var(--primary-blue);
-  text-decoration: none;
-  font-weight: 500;
-  border-bottom: 1px solid #eee;
-  transition: background-color 0.2s ease;
-}
-
-.br-list .br-item:hover {
-  background-color: #f5f5f5;
-  text-decoration: underline;
+  font-size: 16px;
+  height: 30px;
+  width: 80px;
+  outline: none;
 }
 
 /* ===================== MENU LATERAL ===================== */
 .menu-lateral {
-  position: sticky;
-  top: 120px;
-  width: 260px;
+  min-width: 230px;
+  max-width: 260px;
   background-color: #f8f9fa;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 1rem 1rem 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  margin-right: 2rem;
+  height: fit-content;
 }
 
 .menu-lateral h2 {
@@ -224,41 +159,179 @@ main {
   color: #fff;
 }
 
-/* ===================== CONTEÚDO PRINCIPAL ===================== */
-.layout-principal {
+/* ===================== GOVBR TABS E LISTAS ===================== */
+/* Container geral da seção */
+.acesso {
   display: flex;
+  align-items: flex-start;
   gap: 2rem;
-  margin-top: 6rem;
-  padding: 0 2rem;
+  padding: 2rem;
+  background-color: #fff;
+  flex-wrap: wrap;
 }
 
-.container-cima {
+/* Título + linha vertical */
+.aba.lateral {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.aba.lateral h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+  margin: 0;
+}
+/* Botões em linha */
+.tab-sidebar {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; 
+}
+
+.tab-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Botões GOVBR */
+.br-button {
+  padding: 0.5rem 1.2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  border: none;
+  background-color: transparent;
+  color: var(--primary-blue);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.br-button:hover {
+  background-color: #e6f0ff;
+}
+
+.br-button.is-active {
+  background-color: var(--primary-blue);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* Área de conteúdo */
+.tab-content-area {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Painéis */
+.tab-panel {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.tab-panel.is-active {
+  display: flex;
+  opacity: 1;
+}
+
+/* Lista de serviços */
+.br-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.br-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0;
+  color: var(--primary-blue);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s ease;
+}
+
+.br-item:hover {
+  background-color: #f5f5f5;
+  text-decoration: underline;
+}
+
+/* ===================== REDES SOCIAIS DIREITA ===================== */
+.Redes-direito {
+  min-width: 160px;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+.Redes-direito h5 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-blue);
+}
+
+.Redes-direito ul {
+  display: flex;
+  flex-direction: row;
+  gap: 0.7rem;
+  padding: 0;
+  margin: 0;
+}
+
+.Redes-direito li {
+  display: inline-block;
+}
+
+.Redes-direito img {
+  width: 28px;
+  height: 28px;
+}
+
+/* ===================== CONTEÚDO PRINCIPAL ===================== */
+.container-cima { 
   flex-grow: 1;
+  max-width: 1000px;
+  margin: 0 auto 2rem auto;
 }
 
-.Coral-GMP {
+.Coral-GMP img {
   width: 100%;
   max-width: 962px;
-  height: auto;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
 
 .Relogio {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 2rem;
 }
 
 .Relogio img {
   width: 100%;
   max-width: 962px;
-  height: auto;
   border-radius: 8px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
-
+.retangulo-IMG {
+  background-color: #FFB400;
+  padding: 0.2rem;
+  border-radius: 1px;
+  width: 70px;
+  height: 1px;
+  opacity: 1;
+}
 .embaixo-img {
+  width: 38;
+  height: 34;
+  opacity: 1;
+  top: 954px;
+  left: 455px;
   display: block;
   text-align: center;
   margin-top: 1rem;
@@ -268,17 +341,42 @@ main {
 
 /* ===================== PARTE BAIXO E NOTÍCIAS ===================== */
 .parte-baixo {
-  margin: 3rem auto 0 auto;
+  margin: 2rem auto 0 auto;
   padding: 0 1rem;
   max-width: 1200px;
   width: 100%;
 }
-
 .SEBEM {
   width: 100%;
   max-width: 1532px;
   height: auto;
   margin-bottom: 2rem;
+}
+.noticias-barra-titulo{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+}
+.barra-vertical {
+  width: 16px;
+  height: 120px;
+  margin-right: 12px;
+  border-radius: 6px;
+  background: linear-gradient(
+    180deg,
+    #1351b4 0%,
+    #ffd600 40%,
+    #ffb400 100%
+  );
+  box-shadow: 0 0 4px rgba(0,0,0,0.08);
+}
+
+.titulo-mais-noticias {
+  color: #1351b4;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
 }
 
 .Noticias-section > .noticias-horizontal {
@@ -312,43 +410,90 @@ main {
   font-size: 0.95rem;
 }
 
-/* ===================== GALERIA DE FOTOS ===================== */
-.galeria-fotos,
-.Cachoeira,
-.criancas,
-.ponte,
-.Foto_flor {
-  margin-top: 1rem;
-  text-align: center;
+.overlay-retangulo,
+.overlay-retangulo2,
+.overlay-retangulo3 {
+  display: none; /* Esconde overlays se não usados */
 }
 
-.galeria-fotos img,
-.Cachoeira img,
+.retangulo-text {
+  background-color: #FFB400;
+  padding: 0.2rem;
+  border-radius: 2px;
+  width: 190px;
+  height: 1px;
+  opacity: 1;
+  margin: 0.5rem auto;
+}
+
+/* ===================== GALERIA DE FOTOS ===================== */
+.secao-banner {
+  width: 100%;
+  min-height: 300px;
+  background: var(--primary-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 0 1rem 0;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+
+.secao-banner h2 {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #FFFFFF;
+}
+
+.cachoeira {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.galeria {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+
+.imagens-secundarias {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
 .criancas img,
 .ponte img,
 .Foto_flor img {
-  max-width: 100%;
+  width: 250px;
+  height: auto;
   border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+
 }
 
 /* ===================== RODAPÉ ===================== */
 .br-footer {
   background-color: var(--secondary-gray);
   color: var(--ink-regular);
-  padding: 2rem 0;
+  padding: 2rem 0 0.5rem 0;
   text-align: center;
-  bottom: 0;
   width: 100%;
+  margin-top: 2rem;
 }
 
 .br-footer .container {
-  position: relative;
-  bottom: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: stretch;
+  align-items: flex-start;
   flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .br-footer .row {
@@ -356,14 +501,18 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 2rem;
 }
 
 .br-footer .col-md-3 {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   margin-bottom: 1rem;
+  min-width: 200px;
+  max-width: 260px;
+  gap: 0.7rem;
 }
 
 .br-footer img {
@@ -371,10 +520,28 @@ main {
   margin: 0.25rem auto;
 }
 
+.br-footer h5 {
+  color: var(--primary-blue);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.br-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.br-footer ul li {
+  margin-bottom: 0.3rem;
+}
+
 .footer-limit {
   height: 10px;
   width: 100%;
   background-color: var(--primary-blue);
+  margin-top: 1.5rem;
 }
 
 .fw-bold {
@@ -399,7 +566,7 @@ main {
 
 /* ===================== RESPONSIVIDADE ===================== */
 @media (max-width: 1200px) {
-  .layout-principal {
+  main.layout-principal {
     flex-direction: column;
     gap: 1rem;
     padding: 0 1rem;
@@ -409,12 +576,16 @@ main {
     position: static;
     margin-bottom: 1rem;
   }
+  .container-cima {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 992px) {
   .br-footer .row {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
   .br-footer .col-md-3 {
     width: 100%;
@@ -424,6 +595,9 @@ main {
   .container-cima,
   .SEBEM {
     max-width: 100%;
+  }
+  .nav-links {
+    gap: 1rem;
   }
 }
 
@@ -447,5 +621,25 @@ main {
   .br-button {
     width: 100%;
     text-align: left;
+  }
+  .menu-lateral {
+    min-width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+  }
+  main.layout-principal {
+    flex-direction: column;
+    padding: 0 0.5rem;
+  }
+  .Redes-direito {
+    margin-left: 0;
+    margin-top: 2rem;
+    min-width: 100%;
+    justify-content: center;
+  }
+  .br-footer .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 }

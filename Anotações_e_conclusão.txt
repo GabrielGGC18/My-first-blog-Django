@@ -12,22 +12,25 @@ Feito✅
 8-Linkas as abas da parte superior do site✅ 
 9-Aplicar as Classes no "br-item "no site✅ 
 10-Cabeçalho com menu horizontal (Design System)✅
-11-Imagem de destaque central✅
+11-Imagem de destaque central✅ 
 12-Coluna lateral direita com notícias✅ 
 2- Pegar o link e referências das imagens para o site da Prefeitura✅
 6-Aba de Pesquisar✅
 22-Adição de elementos no text mais notícias(width: 57;)✅
 17-Colocar o "cidadão", "Empresa", "Servidor", na parte lateral da página(ao lado da foto do Relógio).✅
+24-Adição dos elementos atrás das palavras(aba lateral):✅
+19- Adicionar Outra foto com o aumento da página✅
+20-Adição de 13 fotos(Sendo 9 notícias e 4 fotos de paisagem) - colocar a foto do espaço cultural de fundo, adicionando uma parte(Azul background: #1D4D8B;)✅
+5-Adicionar os icones das Redes socias no canto superior direito✅
+26-Colocar os "Rectangles" ex: 236, 251...✅
 
-#A Fazer:
-5-Adicionar os icones das Redes socias no canto superior direito
+
+?A Fazer:?
 8-Estilizar o site, colocando as divisórias das logos, canto superior e inferior.
 9-Aumentar e melhorar os espaços entre as logos
 15-Rodapé institucional
-16-ícones de Redes Sociais na Página
 18- Fazer o site por inteiro igual no Figma
-19- Adicionar Outra foto com o aumento da página
-20-Adição de 13 fotos(Sendo 9 notícias e 4 fotos de paisagem) - colocar a foto do espaço cultural de fundo, adicionando uma parte(Azul background: #1D4D8B;)
+
 21-Fazer layout do App da Prefeitura(font-family: Inter;
     font-weight: 400;
     font-style: Regular;
@@ -35,54 +38,7 @@ Feito✅
     leading-trim: NONE;
     line-height: 24px;
    letter-spacing: 0%;)  
-23-Dimensões ícones parte superior da Página:
-Instagram                   
-width: 50;
-height: 50; 
-top: 191.76px;
-left: 1485.22px;
-angle: 0 deg;
-opacity: 1; 
 
-Twitter(X)
-width: 41;
-height: 41;
-top: 196.76px;
-left: 1559.22px;
-angle: 0 deg;
-opacity: 1;
+25-Terminar a adição de fotos e elementos da página.
+27-Alinhamento das abas de cidadão
 
-Youtube
-width: 55;
-height: 55;
-top: 189.76px;
-left: 1632.22px;
-angle: 0 deg;
-opacity: 1;
-
-Facebook
-width: 48;
-height: 48;
-top: 192.76px;
-left: 1711.22px;
-angle: 0 deg;
-opacity: 1;
-
-Dois pontos
-width: 48;
-height: 48;
-top: 192.76px;
-left: 1711.22px;
-angle: 0 deg;
-opacity: 1;
-
-24-Adição dos elementos atrás das palavras(aba lateral):
-width: 310;
-height: 56;
-top: 521px;
-left: 57px;
-angle: 0 deg;
-opacity: 1;
-
-Cor(background: #F0F0F0;
-)

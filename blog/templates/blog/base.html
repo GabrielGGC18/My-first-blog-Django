@@ -37,11 +37,29 @@
     </div>
   </div>
 </nav>
-
 <main class="layout-principal d-flex">
+  <!--Aba de Notícias lado direito e ícones Redes Sociais-->
+  <div class="Redes-direito">
+        <h5>Redes sociais</h5>
+        <ul class="list-unstyled">
+          <li><a href="https://www.instagram.com/cidadepalmas/" aria-label="Instagram"><img src="{% static 'assets/css/icons/instagram.svg' %}" alt="Instagram"></a></li>
+          <li><a href="https://www.facebook.com/cidade.palmas/" aria-label="Facebook"><img src="{% static 'assets/css/icons/facebook.svg' %}" alt="Facebook"></a></li>
+          <li><a href="https://x.com/cidadepalmas" aria-label="Twitter"><img src="{% static 'assets/css/icons/twitter-x.svg' %}" alt="Twitter"></a></li>
+          <li><a href="https://www.youtube.com/channel/UC8cvTiXKsKwgvQdZ7h0EUEg" aria-label="YouTube"><img src="{% static 'assets/css/icons/youtube.svg' %}" alt="YouTube"></a></li>
+        </ul>
+      </div>
+<section>
+  <section class ="noticias-direito">
+    <div class ="coluna-noticias">
+      <div class="card-direito">
+        <img src="{% static 'assets/Dia_D.jpg' %}" alt="FGT" class="card-noticia">
+        <strong class="noticia-informações">Palmas está representada no curso de formação continuada do programa Escola em Tempo Integral</strong>
+      </div>
+    </div>
+</section>
   <!-- 🔹 Menu Lateral -->
   <section class="menu-lateral">
-    <div class="row">
+    <div class="acesso">
       <article class="aba lateral">  
         <h2>Acesso Rápido</h2>
       </article>
@@ -79,7 +97,6 @@
       </div>
     </div>
   </section>
-
   <!-- 🖼️ Imagem Central -->
   <div class="container-cima">
     <div class="Coral-GMP">
@@ -88,39 +105,62 @@
 
     <div class="Relogio row justify-content-center">
       <img src="{% static 'assets/relógio_palmas.jpg' %}" class="img-fluid rounded" alt="Relógio das Flores">
-      <strong class="embaixo-img" style="margin-top: 1rem;">#Tag #Zeladoria Urbana<br> Relógio das Flores passará por reparos após depredação em Palmas</strong>
+      <p>#Tag #Zeladoria Urbana</p>
+      <div class ="retangulo-IMG"></div>
+      <strong class="embaixo-img" style="margin-top: 1rem;">Relógio das Flores passará por reparos após depredação em Palmas</strong>
     </div>
   </div>
-
   <!-- 📣 Parte Baixo -->
   <div class="parte-baixo">
-    <img src="{% static 'assets/Sebem.jpg' %}" class="SEBEM" alt="Sebem">
+    <img src="{% static 'assets/Sebem.jpg' %}" class="SEBEM" alt="Sebem"></div>
+    <div class="noticias-barra-titulo">
+      <div class="barra-vertical"></div>
+      <h3 class="titulo-mais-noticias">Mais notícias</h3>
+    </div>
     <div class="Noticias-section">
      <div class="noticias-horizontal">
+      <div class="overlay-retangulo"></div>
+      <div class="overlay-retangulo2"></div>
+      <div class="overlay-retangulo3"></div>
       <div class="noticia-card">
         <img src="{% static 'assets/prazo_fgts.jpg' %}" alt="FGT" class="card-noticia">
-        <strong class="noticia-titulo">Prefeitura de Palmas encerra fase de degustação de pratos do FGT</strong>
+        <p>Edição 2025<br></p>
+        <div class="retangulo-text"></div>
+        <strong class="noticia-titulo">refeitura de Palmas encerra fase de degustação de pratos do FGT</strong>
+       
       </div>
       <div class="noticia-card">
         <img src="{% static 'assets/Volta_aulas.jpg' %}" alt="Saúde das Crianças" class="card-noticia">
+        <p>Volta às Aulas<br></p>
+        <div class="retangulo-text"></div>
         <strong class="noticia-titulo">Prefeitura recomenda cuidados necessários no trânsito durante retorno das férias escolares em Palmas</strong>
+        
+
       </div>
       <div class="noticia-card">
         <img src="{% static 'assets/Segurança_Trânsito.jpg' %}" alt="Recapeamento" class="card-noticia">
+        <p>Segurança no Trânsito<br></p>
+        <div class="retangulo-text"></div>
         <strong class="noticia-titulo">Prefeitura de Palmas executa sinalização viária próxima à rotatória da Avenida NS-02 e Avenida LO-21</strong>
+        
       </div>
       <div class="noticia-card">
         <img src="{% static 'assets/Zeladoria_urbana.jpg' %}" alt="Limpeza Sul" class="card-noticia">
+        <p>Zeladoria Urbana<br></p>
+        <div class="retangulo-text"></div>
         <strong class="noticia-titulo">Prefeitura realiza serviços de zeladoria no circuito da 3ª Meia Maratona de Palmas</strong>
+        
   </div>
 </div>
 <!--Galeria de Fotos-->
-<div class="galeria-fotos">
-  <img src="{% static 'assets/espaco-cultural-de-palmas.jpg' %}" alt="espaço-cultural" class="Fundo-página"> 
- </div> 
-  <div class="Cachoeira">
+<div class="secao-banner">
+  <h2> Galeria de Fotos</h2>
+
+  <div class="cachoeira">
     <img src="{% static 'assets/Foto_Cachoeira.png' %}" alt="cachoeira" class="galeria">
    </div>
+
+  <div class="imagens-secundarias"></div>
   <div class ="criancas">
     <img src="{% static 'assets/crianças.png' %}" alt="crianças-x" class="crianças">
   </div>
@@ -130,7 +170,7 @@
   <div class="Foto_flor">
     <img src="{% static 'assets/Foto_flor.png' %}" alt="flores-x" class="flores">
   </div>
-  
+ </div>  
 </main>
   <!-- 🧭 Rodapé -->
 <footer class="br-footer mt-5" role="contentinfo">
